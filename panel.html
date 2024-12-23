@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="panel.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 240 10% 3.9%;
+--card: 0 0% 100%;
+--card-foreground: 240 10% 3.9%;
+--popover: 0 0% 100%;
+--popover-foreground: 240 10% 3.9%;
+--primary: 240 5.9% 10%;
+--primary-foreground: 0 0% 98%;
+--secondary: 240 4.8% 95.9%;
+--secondary-foreground: 240 5.9% 10%;
+--muted: 240 4.8% 95.9%;
+--muted-foreground: 240 3.8% 46.1%;
+--accent: 240 4.8% 95.9%;
+--accent-foreground: 240 5.9% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 5.9% 90%;
+--input: 240 5.9% 90%;
+--ring: 240 5.9% 10%;
+--radius: 0.5rem;
+				}
+				.dark {
+					--background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--primary: 0 0% 98%;
+--primary-foreground: 240 5.9% 10%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--ring: 240 4.9% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+<div class="container-sm">
+  <h2 class="navimg"><img src="menu_01.jpg" alt=""></h2>
+
+    <div class="navbarr bg-card p-4 shadow-md rounded-lg">
+  <div class="d-flex align-items-center justify-content-center flex space-x-4 mt-2">
+    <a href="panel.html" class="flex flex-col items-center text-muted hover:text-primary relative">
+      <img aria-hidden="true" alt="Home" src="https://openui.fly.dev/openui/24x24.svg?text=🏠" />
+      <span class="text-sm">Anasayfa</span>
+    </a>
+    <div class="relative">
+      <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+        <img aria-hidden="true" alt="Edit Page" src="https://openui.fly.dev/openui/24x24.svg?text=✏️" />
+        <span class="text-sm">Sayfa Düzenle</span>
+      </a>
+      <ul class="dropdown-menu hidden absolute bg-white shadow-md rounded mt-2 p-2">
+        <li><a href="sayfalar.html">Sayfalar</a></li>
+        <li><a href="haberler.html">Haberler</a></li>
+        <li><a href="fotogaleri.html">Fotoğraf Galerisi</a></li>
+        <li><a href="#">Video Galerisi</a></li>
+        <li><a href="#">E-Ticaret</a></li>
+        <li><a href="#">İntro Sayfası</a></li>
+        <li><a href="#">Sık Sorulan Sorular</a></li>
+        <li><a href="#">Bilgi Bankası</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Yorum Denetleme</a></li>
+        <li><a href="#">Form Oluşturucu</a></li>
+        <li><a href="#">Biz Sizi Arayalım</a></li>
+        <li><a href="#">İş Başvuru Formları</a></li>
+        <li><a href="#">Bayilik Başvuruları</a></li>
+        <li><a href="#">Dosya Yöneticisi</a></li>
+        <li><a href="#">Anahtar Kelimeler</a></li>
+        <li><a href="#">Sosyal Medya Bilgileri</a></li>
+        <li><a href="#">Kod Kütüphanesi</a></li>
+      </ul>
+    </div>
+    <div class="relative">
+      <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+        <img aria-hidden="true" alt="Themes" src="https://openui.fly.dev/openui/24x24.svg?text=🎨" />
+        <span class="text-sm">Temalar</span>
+      </a>
+      <ul class="dropdown-menu hidden absolute bg-white shadow-md rounded mt-2 p-2">
+        <li><a href="#">Menü Yerleşimi</a></li>
+        <li><a href="#">Üst Bölüm</a></li>
+        <li><a href="#">Alt Bölüm</a></li>
+        <li><a href="#">Arkaplan</a></li>
+        <li><a href="#">Font</a></li>
+        <li><a href="#">CSS Düzenleme</a></li>
+        <li><a href="#">Anasayfa Geniş Slaytı</a></li>
+
+      </ul>
+    </div>
+    <div class="relative">
+      <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+        <img aria-hidden="true" alt="Settings" src="https://openui.fly.dev/openui/24x24.svg?text=⚙️" />
+        <span class="text-sm">Ayarlar</span>
+      </a>
+      <ul class="dropdown-menu hidden absolute bg-white shadow-md rounded mt-2 p-2">
+        <li><a href="#">Site Bilgileri</a></li>
+        <li><a href="#">Modüller</a></li>
+        <li><a href="#">Diller</a></li>
+        <li><a href="#">Sözleşmeler</a></li>
+        <li><a href="#">Kullanıcılar</a></li>
+        <li><a href="#">Şifre Değişikliği</a></li>
+      </ul>
+    </div>
+    <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+      <img aria-hidden="true" alt="Preview" src="https://openui.fly.dev/openui/24x24.svg?text=🔍" />
+      <span class="text-sm">Önizleme</span>
+    </a>
+    <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+      <img aria-hidden="true" alt="Contact" src="https://openui.fly.dev/openui/24x24.svg?text=@️" />
+      <span class="text-sm">İletişim</span>
+    </a>
+    <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+      <img aria-hidden="true" alt="Guestbook" src="https://openui.fly.dev/openui/24x24.svg?text=📓" />
+      <span class="text-sm">Ziyaretçi Defteri</span>
+    </a>
+    <a href="#" class="flex flex-col items-center text-muted hover:text-primary">
+      <img aria-hidden="true" alt="Logout" src="https://openui.fly.dev/openui/24x24.svg?text=🚪" />
+      <span class="text-sm">Çıkış</span>
+    </a>
+  </div>
+    </div>
+    <div class="relative inline-block text-left" id="btn1">
+      <div>
+        <button
+          class="inline-flex justify-between w-full rounded-md border border-zinc-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-zinc-700 hover:bg-zinc-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-100 focus:ring-indigo-500"
+          id="options-menu"
+          aria-haspopup="true"
+          aria-expanded="false"
+          onclick="toggleDropdown()"
+        >
+          YÖNETİCİ HIZLI ERİŞİM
+          <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <div id="dropdown-menu" class="hidden absolute right-0 z-10 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <div class="py-1" role="none">
+          <a href="sayfa-duzenlemeler.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Sayfa Düzenlemeler</a>
+          <a href="sayfa-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Sayfa Ekle</a>
+          <a href="haber-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Haber Ekle</a>
+          <a href="fotograflar.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Fotograflar</a>
+          <a href="videolar.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Videolar</a>
+          <a href="anket-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Anket Ekle</a>
+          <a href="kose-yazisi-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Köşe Yazısı Ekle</a>
+          <a href="yazar-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Yazar Ekle</a>
+          <a href="sik-sorulan-soru-ekle.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Sık Sorulan Soru Ekle</a>
+          <a href="bloklar.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Bloklar</a>
+          <a href="form-olusturucu.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Form Oluşturucu</a>
+          <div class="border-t border-zinc-100"></div>
+          <a href="kontrol-gerektirenler.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Kontrol Gerektirenler</a>
+          <a href="ziyaretci-defteri.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Ziyaretçi Defteri (0)</a>
+          <a href="iletisim-formu.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">İletişim Formu (0)</a>
+          <a href="yorumlar.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Yorumlar (0)</a>
+          <a href="is-basvurulari.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">İş Başvuruları (0)</a>
+          <a href="bayilik-basvurulari.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Bayilik Başvuruları (0)</a>
+          <a href="bekleyen-siparisler.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Bekleyen Siparişler (0)</a>
+          <a href="diger-bolumler.html" class="block px-4 py-2 text-sm text-zinc-700 hover:bg-zinc-100" role="menuitem">Diğer Bölümler</a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="solcol col-sm-6">
+            <div class="p-4 bg-card text-card-foreground rounded-lg shadow-md">
+                <h1 class="text-2xl font-bold mb-4">Ahmet KARGILI Hoşgeldiniz</h1>
+                <div class="mb-6">
+                  <h2 class="text-lg font-semibold">• Denetiminizi gerektiren bölümler</h2>
+                  <ul class="list-disc list-inside">
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Ziyaretçi defteri için onay bekleyen mesajlar: <span class="font-bold">0</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        İletişim formundan gelen mesajlar: <span class="font-bold">0</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Yorumlar (fotoğraflar): <span class="font-bold">0</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        Bekleyen Siparişler: <span class="font-bold">0</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="hover:underline">
+                        İş Başvuruları: <span class="font-bold">0</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="scrollable-container">
+                  <h2 class="text-lg font-semibold">Haber / Duyurular</h2>
+                  <p class="font-bold">• Covid-19 için 14 önlem</p>
+                  <ul class="list-disc list-inside">
+                    <li>Ellerinizi sık sık su ve sabun ile en az 20 saniye boyunca ovalayarak yıkayın.</li>
+                    <li>Soğuk algınlığı belirtileri gösteren kişilerle aranıza en az 2-3 adım mesafe koyun.</li>
+                    <li>Öksürme veya hapşırma sırasında ağzınızı ve burnunuzu tek kullanımlık mendille kapatın. Yüzünüzü dirseğinizle kapatın.</li>
+                    <li>Tokalaşma, sarılma gibi yakın temaslardan kaçının.</li>
+                    <li>Ellerinizle gözlerinize, ağzınıza ve burnunuza dokunmayın.</li>
+                    <li>Yurt dışı seyahatlerinizi iptal edin ya da erteleyin.</li>
+                    <li>Yurt dışından dönüşte ilk 14 günü evinizde geçirin.</li>
+                    <li>Bulunduğunuz ortamları sık sık havalandırın.</li>
+                    <li>Kıyafetlerinizi 60-90°C'de normal deterjanla yıkayın.</li>
+                    <li>Kapı kolları, armatürler, lavabolar gibi sık kullandığınız yüzeyleri su ve deterjanla her gün temizleyin</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+
+        <div class="sagcol col-sm-6"><div class="p-4 bg-card text-card-foreground">
+          
+            <div class="grid grid-cols-3 gap-4">
+              <div class="text-center">
+                <a href="sayfalar.html">
+                  <img aria-hidden="true" alt="Pages" src="https://openui.fly.dev/openui/50x50.svg?text=📄" />
+                  <p>Sayfalar</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="fotogaleri.html">
+                  <img aria-hidden="true" alt="Photo Gallery" src="https://openui.fly.dev/openui/50x50.svg?text=🖼️" />
+                  <p>Fotoğraf Galerisi</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Video Gallery" src="https://openui.fly.dev/openui/50x50.svg?text=🎥" />
+                  <p>Video Galerisi</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Surveys" src="https://openui.fly.dev/openui/50x50.svg?text=📊" />
+                  <p>Anketler</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="News" src="https://openui.fly.dev/openui/50x50.svg?text=📰" />
+                  <p>Haberler</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="FAQ" src="https://openui.fly.dev/openui/50x50.svg?text=❓" />
+                  <p>Sık Sorulan Sorular</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Comments" src="https://openui.fly.dev/openui/50x50.svg?text=💬" />
+                  <p>Yorumlar</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Site Settings" src="https://openui.fly.dev/openui/50x50.svg?text=⚙️" />
+                  <p>Site Ayarları</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Modules" src="https://openui.fly.dev/openui/50x50.svg?text=🔌" />
+                  <p>Modüller</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Themes" src="https://openui.fly.dev/openui/50x50.svg?text=🎨" />
+                  <p>Temalar</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="E-Commerce" src="https://openui.fly.dev/openui/50x50.svg?text=🛒" />
+                  <p>E-Ticaret</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Human Resources" src="https://openui.fly.dev/openui/50x50.svg?text=👥" />
+                  <p>İnsan Kaynakları</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Dealers" src="https://openui.fly.dev/openui/50x50.svg?text=🏪" />
+                  <p>Bayiler</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Corner Articles" src="https://openui.fly.dev/openui/50x50.svg?text=📝" />
+                  <p>Köşe Yazıları</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Blocks" src="https://openui.fly.dev/openui/50x50.svg?text=📦" />
+                  <p>Bloklar</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Form Builder" src="https://openui.fly.dev/openui/50x50.svg?text=🛠️" />
+                  <p>Form Oluşturucu</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Quick Access" src="https://openui.fly.dev/openui/50x50.svg?text=⚡" />
+                  <p>Hızlı Erişim</p>
+                </a>
+              </div>
+              <div class="text-center">
+                <a href="#">
+                  <img aria-hidden="true" alt="Visitor Book" src="https://openui.fly.dev/openui/50x50.svg?text=📖" />
+                  <p>Ziyaretçi Defteri</p>
+                </a>
+              </div>
+            </div>
+          </div></div>
+        
+          
+         </div>
+</div>
+<script>
+function toggleDropdown() {
+  var dropdownMenu = document.getElementById("dropdown-menu");
+  dropdownMenu.classList.toggle("hidden");
+}
+</script>
+  </body>
+</html>
+</body>
+</html>

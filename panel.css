@@ -1,0 +1,89 @@
+.container-sm{
+    width: 65% !important;
+}
+.text-muted{
+    color: black !important;
+}
+.navbarr{
+    margin-left: 160px !important;
+}
+.navbarr a{
+    padding-right: 15px;
+}
+.navimg img{
+    position: absolute;
+    top: 5px;
+    height: auto;
+    width: 150px;
+    margin-right: 150px;
+}
+.solcol{
+    margin-top: 10px !important;
+}
+.sagcol{
+    margin-top: 5px !important;
+    line-height: 15px;
+}
+.sagcol img{
+    margin-left: 45px;
+    height: auto;
+    width: 40px;
+}
+.relative {
+    position: relative;
+  }
+  
+.dropdown-menu {
+    font-size: 12px !important;
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -10px;
+    z-index: 10;
+    min-width: 150px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .relative:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    padding: 8px 12px;
+  }
+  
+  .dropdown-menu li a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu li a:hover {
+    color: #0056b3;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  .scrollable-container {
+    width: 400px; /* Alanın genişliğini ayarlayın */
+    height: 300px; /* Alanın yüksekliğini ayarlayın */
+    overflow-y: auto; /* Yalnızca dikey kaydırma */
+    border: 1px solid #cccccc6c; /* Alanın sınırını belirginleştirmek için */
+    padding: 10px; /* İçeriğin kenarlara olan mesafesini ayarlayın */
+    border-radius: 10px;
+  }
+  #btn1 button{
+    position: relative;
+    width: 200px;
+    top: 10px;
+    left: 748px;
+    font-size: 10px !important;
+  }
+  #dropdown-menu a{
+    line-height: 10px;
+  }
+  #dropdown-menu{
+    width: 200px;
+    left: 750px;
+  }
